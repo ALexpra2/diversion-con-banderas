@@ -7,4 +7,85 @@ body {
 
 h1 {
   color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#lista {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap:10px;
+ 
+}
+
+#lista li {
+  display: flex;
+
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid rgb(222, 218, 218);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, background-color 0.3s;
+  cursor: pointer;
+}
+
+#imgBandera {
+  width: 190px;
+  height: 100px; 
+  border-radius: 3px;
+}
+
+/* Estilos popup */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);      /* to y left colocan la esquina supizda en el centro*/
+  background: white;                    /* con el translate coloco el centro del popup*/
+  padding: 20px;
+  border: 1px solid rgb(229, 219, 219);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1;                              /*coloca mi elemento respecto a lso demas*/
+  width: 500px;
+  text-align: center;
+} 
+
+
+#popup.oculto {
+  display: none;
+}
+
+#propiedadesPais img {
+  width: 260px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+#propiedadesPais p {
+  margin: 7px 0;
+  font-size: 20px;
+  
+}
+
+/* Botón para cerrar popup */
+#popupbtn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #f44;
+  color: white;
+  border: none;
+  border-radius: 5px; 
+  font-size: 14px;
+  
+}
+
+#popupbtn:hover {
+  background-color: #d33;
 }
